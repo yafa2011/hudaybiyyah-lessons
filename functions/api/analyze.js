@@ -41,9 +41,7 @@ function json(data, status = 200) {
 function parseAnswer(text) {
   let cleaned = text.trim();
 
-  cleaned = cleaned
-    .replace(/^```(?:json)?\s*/i, "")
-    .replace(/\s*```$/i, "");
+ cleaned = cleaned.trim();
 
   const start = cleaned.indexOf("{");
   const end = cleaned.lastIndexOf("}");
